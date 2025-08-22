@@ -4,7 +4,7 @@ import {
   useContext,
   useEffect,
   useReducer,
-} from "react";
+} from 'react';
 
 const BASE_URL = `http://localhost:3000`;
 
@@ -99,7 +99,7 @@ const CitiesProvider = ({ children }) => {
       const response = await fetch(`${BASE_URL}/cities`, {
         method: `POST`,
         body: JSON.stringify(newCity),
-        headers: { "Content-Type": "application/json" },
+        headers: { 'Content-Type': 'application/json' },
       });
       const data = await response.json();
       dispatch({ type: `city/created`, payload: data });
